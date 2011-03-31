@@ -1,0 +1,77 @@
+
+
+Example transcript:
+
+
+$ ipython d20_shell.py
+In [1]: party.add('bob')
+Out [1]: <PC 'bob'>
+
+In [2]: party.add('fred')
+Out [2]: <PC 'fred'>
+
+In [3]: party.skillcheck('spot')
+>>> bob's spot skill: 5
+>>> fred's spot kill: 4
+bob's spot roll: 18
+fred's spot roll: 23
+
+In [4]: party.skillcheck('spot', 15)
+bob's spot roll: 12 FAILED
+fred's spot roll: 15 SUCCEEDED
+
+In [5]: party.add('alice')
+Out [5]: <PC 'alice'>
+
+In [6]: party.skillcheck('spot', 20)
+>>> alice's spot skill: 12
+bob's spot roll: 19 FAILED
+fred's spot roll: 22 SUCCEEDED
+alice's spot roll: 28: SUCCEEDED
+
+In [7]: init.add(party)
+
+In [8]: init.start()
+>>> bob's init stat: 2
+>>> fred's init stat: 3
+>>> alice's init stat: 1
+Round 1 Started
+Out [8]: alice's turn (18)
+
+In [9]: init.add(monsters.orc)
+>>> orc's init stat: 3
+
+In [10]: party.add('psmythe')
+<PC 'psmythe'>
+
+In [11]: init.add(party)
+skipping bob
+skipping fred
+skipping alice
+
+In [12]: init.next()
+>>> psmythe's init stat: 12
+bob's turn (16)
+
+In [13]: init.next()
+orc#1's turn (15)
+
+In [14]: init.move(party.alice) #defaults to right now
+alice's turn (15)
+
+In [15]: init.next()
+orc#1's turn (15)
+
+In [16]: init.next()
+fred's turn (5)
+
+In [17]: init.next()
+Round 2 started.
+psmythe's turn (28)
+
+In [18]: init.start()
+Round 1 Started
+psmythe's turn (24)
+
+In [19]: init.start()
+orc#1's turn (21)
