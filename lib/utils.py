@@ -22,7 +22,7 @@ def render_string(item):
 
     return item
 
-def roll(number, sides, addition):
+def roll(number=1, sides=20, addition=0):
     res = 0
     for i in range(number):
         res += random.randint(1, sides)
@@ -40,4 +40,13 @@ def dice_callback(matchobj):
     else:
         addition = 0
     return str(roll(number, sides, addition))
+
+import readline
+
+def raw_input_no_history(output=None):
+    input = raw_input(output)
+    readline.remove_history_item(readline.get_current_history_length()-1)
+    return input
+    
+    
     
