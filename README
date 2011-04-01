@@ -10,20 +10,20 @@ Out [1]: <PC 'bob'>
 In [2]: party.add('fred')
 Out [2]: <PC 'fred'>
 
-In [3]: party.skillcheck('spot')
+In [3]: party.roll('spot')
 >>> bob's spot skill: 5
 >>> fred's spot kill: 4
 bob's spot roll: 18
 fred's spot roll: 23
 
-In [4]: party.skillcheck('spot', 15)
+In [4]: party.roll('spot', 15)
 bob's spot roll: 12 FAILED
 fred's spot roll: 15 SUCCEEDED
 
 In [5]: party.add('alice')
 Out [5]: <PC 'alice'>
 
-In [6]: party.skillcheck('spot', 20)
+In [6]: party.roll('spot', 20)
 >>> alice's spot skill: 12
 bob's spot roll: 19 FAILED
 fred's spot roll: 22 SUCCEEDED
