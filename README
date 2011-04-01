@@ -3,7 +3,7 @@
 Example transcript:
 
 
-$ ipython d20_shell.py
+$ ipython shell.py
 In [1]: party.add('bob')
 Out [1]: <PC 'bob'>
 
